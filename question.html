@@ -1,0 +1,43 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<style>
+
+</style>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../static/styles/question.css" th:href="@{/styles/question.css}">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body class="body">
+
+
+
+	
+<header class="header">
+
+<img class="logo" src="../static/images/virtusa.png" th:src="@{/images/virtusa.png}">
+</header>
+<div class="topnav">
+  <a href="logout">Logout</a>
+ <a th:href="@{/userprofile}">Profile</a>
+  <a th:href="@{/viewquestion}">Question</a>
+</div>
+
+<form class="form" th:action="@{/saveQuestion}" method="Post">
+<fieldset align="center">
+<legend>Add Question</legend>
+<input name="question"  type="text" placeholder="Question" >
+<div class=a>
+<button type="submit" >Submit</button>
+</div>
+</fieldset>
+</form>
+
+  
+</body>
+</html>
